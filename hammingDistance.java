@@ -17,11 +17,13 @@ public class hammingDistance {
 
         int count = 0;
         int i = xArray.length-1, j = yArray.length-1;
+        // from last element, if two numbers are different, count++
         for (; i> -1 && j > -1; i--, j--){
             if (xArray[i] != yArray[j]){
                 count++;
             }
         }
+        // for the longer list, count the remaining amount of 1
         while (i > -1){
             if (xArray[i]==1) {
                 count++;
